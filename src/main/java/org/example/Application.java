@@ -11,7 +11,8 @@ public class Application {
     public static void main(String[] args) throws SQLException {
         startDatabase();
 
-        final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
+        final EntityManagerFactory entityManagerFactory =
+                Persistence.createEntityManagerFactory("br.com.fredericci.pu");
         final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         Customer customer = new Customer();
@@ -26,7 +27,6 @@ public class Application {
         System.out.println("JDBC URL: jdbc:h2:mem:my_database");
         System.out.println("User Name: sa");
         System.out.println("Password: ");
-
     }
 
     private static void startDatabase() throws SQLException {
