@@ -14,8 +14,6 @@ public class Application {
         AnimalDAO animalDAO = new JpaAnimalDAO();
         AnimalManager animalManager = new AnimalManager(animalDAO);
         animalManager.manage();
-
-
     }
 
     private static void startDatabase() throws SQLException {
